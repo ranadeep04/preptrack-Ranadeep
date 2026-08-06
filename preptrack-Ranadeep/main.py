@@ -76,7 +76,7 @@ critical_days = 0
 highest_score = 0
 highest_score_day = 0
 
-lowest_score = 0
+lowest_score = 101
 lowest_score_day = 0
 
 first_attempt_found = False
@@ -94,7 +94,7 @@ for day in range(1, 8):
     # Accept only -1 or a score between 0 and 100
     score = int(input(f"Enter Day {day} score from 0 to 100, or -1 for absent: "))
 
-    while score != -1 and score < 0 or score > 100:
+    while score != -1 and (score < 0 or score > 100):
         print("Invalid score. Enter a value between 0 and 100, or -1 for absent.")
         score = int(input(f"Enter Day {day} score from 0 to 100, or -1 for absent: "))
 
@@ -278,8 +278,8 @@ print(f"Average Score          : {average_score:.2f}")
 # TODO: Display highest and lowest values only when
 # at least one practice was attempted.
 if attempted_days > 0:
-    print(f"Highest Score          : {highest_score} (Day {highest_score_day})")
-    print(f"Lowest Score           : {lowest_score} (Day {lowest_score_day})")
+    print(f"Highest Score          : {highest_score} ")
+    print(f"Lowest Score           : {lowest_score} ")
 
 # TODO: Display first critical details only when
 # a critical score exists.
