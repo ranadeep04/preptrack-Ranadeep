@@ -277,9 +277,15 @@ print(f"Average Score          : {average_score:.2f}")
 
 # TODO: Display highest and lowest values only when
 # at least one practice was attempted.
+if attempted_days > 0:
+    print(f"Highest Score          : {highest_score} (Day {highest_score_day})")
+    print(f"Lowest Score           : {lowest_score} (Day {lowest_score_day})")
 
 # TODO: Display first critical details only when
 # a critical score exists.
+if critical_score_found:
+    print(f"First Critical Day     : Day {first_critical_day}")
+    print(f"First Critical Score   : {first_critical_score}")
 
 print()
 print(f"Final Status           : {final_status}")
