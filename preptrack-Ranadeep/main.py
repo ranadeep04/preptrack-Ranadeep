@@ -152,6 +152,10 @@ for day in range(1, 8):
 
 # TODO: Prevent division by zero.
 average_score = 0
+if attempted_days > 0:
+    average_score = total_score / attempted_days
+else:
+    average_score = 0
 
 
 # --------------------------------------------------
@@ -200,7 +204,46 @@ placement_ready = (
 final_status = ""
 primary_blocker = ""
 next_action = ""
-
+if attempted_days == 0:
+    final_status = "Not Ready"
+    primary_blocker = "No practice attempted"
+    next_action = "Start daily practice immediately."
+elif critical_score_found:
+    final_status = "Not Ready"
+    primary_blocker = "Critical Score was found"
+    next_action = "Revise weak topics and reattempt practice."
+elif attempted_days < 6:
+    final_status = "Not Ready"
+    primary_blocker = "Fewer than six practice attempts"
+    next_action = "Complete at least six practice sessions."
+elif passed_days < 4:
+    final_status = "Not Ready"
+    primary_blocker = "Fewer than four passed days"
+    next_action = "Improve consistency and pass more practice days."
+elif average_score < 70:
+    final_status = "Not Ready"
+    primary_blocker = "Average score below 70"
+    next_action = "Increase average score through targeted practice."
+elif attendance < 75:
+    final_status = "Not Ready"
+    primary_blocker = "Attendance below 75%"
+    next_action = "Improve attendance before the interview process."
+elif graduation_year!=2025 and graduation_year!=2026:
+    final_status = "Not Ready"
+    primary_blocker = "Graduation year not eligible"
+    next_action = "Check eligibility criteria for current openings."
+elif  project_completed==False:
+    final_status = "Not Ready"
+    primary_blocker = "Project incomplete"
+    next_action = "Complete the required project."
+elif  profile_verified==False:
+    final_status = "Not Ready"
+    primary_blocker = "Profile not verified"
+    next_action = "Complete profile verification."
+else:
+    final_status = "Ready for Mock Interview"
+    primary_blocker = "All criteria satisfied"
+    next_action = "Proceed to Mock Interview"
 
 # --------------------------------------------------
 # 7. DISPLAY FINAL REPORT
