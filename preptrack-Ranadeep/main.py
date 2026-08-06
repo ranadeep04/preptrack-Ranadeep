@@ -110,17 +110,40 @@ for day in range(1, 8):
 
     # TODO: Initialize or update:
     # highest_score, highest_score_day,
+    if score > highest_score:
+        highest_score = score
+        highest_score_day = day
     # lowest_score and lowest_score_day.
+    if score < lowest_score:
+        lowest_score = score
+        lowest_score_day = day
 
     # TODO: Classify the score:
     # 75–100  -> Strong
     # 60–74   -> Satisfactory
     # 40–59   -> Needs Improvement
     # 0–39    -> Critical
+    if 75 <= score <= 100:
+        strong_days+=1
+    elif 60 <= score <= 74:
+        satisfactory_days+=1
+    elif 40 <= score <= 59:
+        improvement_days+=1
+    else:   
+        critical_days+=1
 
     # TODO: Count passed and failed days.
+    if score >= 40:
+        passed_days += 1
+    else:
+        failed_days += 1
+
 
     # TODO: Store only the first critical day and score.
+    if score < 40 and critical_score_found == False:
+        first_critical_day = day
+        first_critical_score = score
+        critical_score_found = True
 
 
 # --------------------------------------------------
