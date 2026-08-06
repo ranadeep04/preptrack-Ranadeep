@@ -133,7 +133,7 @@ for day in range(1, 8):
         critical_days+=1
 
     # TODO: Count passed and failed days.
-    if score >= 40:
+    if score >= 60:
         passed_days += 1
     else:
         failed_days += 1
@@ -228,7 +228,7 @@ elif attendance < 75:
     final_status = "Not Ready"
     primary_blocker = "Attendance below 75%"
     next_action = "Improve attendance before the interview process."
-elif graduation_year!=2025 and graduation_year!=2026:
+elif graduation_year<2025 or graduation_year>2027:
     final_status = "Not Ready"
     primary_blocker = "Graduation year not eligible"
     next_action = "Check eligibility criteria for current openings."
