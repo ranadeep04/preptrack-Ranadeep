@@ -91,20 +91,22 @@ first_critical_score = 0
 # --------------------------------------------------
 
 for day in range(1, 8):
+    # Accept only -1 or a score between 0 and 100
+    score = int(input(f"Enter Day {day} score from 0 to 100, or -1 for absent: "))
 
-    # TODO: Use a while loop to accept only:
-    # -1 or a score between 0 and 100.
-    score = int(
-        input(
-            f"Enter Day {day} score from 0 to 100, "
-            "or -1 for absent: "
-        )
-    )
+    while score != -1 and score < 0 or score > 100:
+        print("Invalid score. Enter a value between 0 and 100, or -1 for absent.")
+        score = int(input(f"Enter Day {day} score from 0 to 100, or -1 for absent: "))
 
     # TODO: Handle absence.
     # Increase absent_days and use continue.
+    if score == -1:
+        absent_days += 1
+        continue
 
     # TODO: Increase attempted_days and total_score.
+    attempted_days += 1
+    total_score += score
 
     # TODO: Initialize or update:
     # highest_score, highest_score_day,
