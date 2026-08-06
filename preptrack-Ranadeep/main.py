@@ -36,14 +36,25 @@ while project_input != "yes" and project_input != "no":
 
 # TODO: Convert project_input into True or False.
 project_completed = False
+if project_input == "yes":
+    project_completed = True
+else:
+    project_completed = False
 
 # TODO: Accept only yes or no.
-profile_input = input(
-    "Is the student profile verified? Enter yes or no: "
-)
+profile_input = input("Is the student profile verified? Enter yes or no: ")
+
+while profile_input != 'yes' and profile_input != 'no':
+    print("Invalid input. Enter yes or no.")
+    profile_input = input("Is the student profile verified? Enter yes or no: ")
+
 
 # TODO: Convert profile_input into True or False.
 profile_verified = False
+if profile_input=="yes":
+    profile_verified=True
+else:
+    profile_verified=False
 
 
 # --------------------------------------------------
