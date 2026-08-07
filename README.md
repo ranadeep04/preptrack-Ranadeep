@@ -71,16 +71,11 @@ The program validates user input, classifies performance for each practice day, 
 ## How to Run the Program
 
 Open the terminal inside the project folder and run:
-
-```bash
 python main.py
-```
 
 If your system uses Python 3:
-
-```bash
 python3 main.py
-```
+
 
 ---
 
@@ -119,20 +114,26 @@ Next Action            : Proceed to Mock Interview
 
 ---
 
+
+
 ## Test Result Summary
 
-| Test ID | Scenario                     | Expected Result                 | Status |
-| ------- | ---------------------------- | ------------------------------- | ------ |
-| TC-01   | All requirements satisfied   | Ready for Mock Interview        | Pass   |
-| TC-02   | Critical score present       | Critical Support Required       | Pass   |
-| TC-03   | Fewer than six attempts      | Practice Incomplete             | Pass   |
-| TC-04   | Fewer than four passes       | Insufficient Passed Practices   | Pass   |
-| TC-05   | Average below 70             | Practice Improvement Required   | Pass   |
-| TC-06   | Attendance below 75          | Attendance Improvement Required | Pass   |
-| TC-07   | Graduation year not eligible | Graduation Criteria Not Met     | Pass   |
-| TC-08   | Project incomplete           | Application On Hold             | Pass   |
-| TC-09   | Profile not verified         | Application On Hold             | Pass   |
-| TC-10   | All days absent              | Practice Not Evaluated          | Pass   |
+| Test ID | Scenario                                         | Expected Result                 | Actual Result                           | Status |
+| ------- | ------------------------------------------------ | ------------------------------- | --------------------------------------- | ------ |
+| TC-01   | All requirements satisfied                       | Ready for Mock Interview        | Ready for Mock Interview                | Pass   |
+| TC-02   | Critical score present                           | Critical Support Required       | Critical Support Required               | Pass   |
+| TC-03   | Fewer than six attempts                          | Practice Incomplete             | Practice Incomplete                     | Pass   |
+| TC-04   | Fewer than four passes                           | Insufficient Passed Practices   | Insufficient Passed Practices           | Pass   |
+| TC-05   | Average below 70                                 | Practice Improvement Required   | Practice Improvement Required           | Pass   |
+| TC-06   | Attendance below 75                              | Attendance Improvement Required | Attendance Improvement Required         | Pass   |
+| TC-07   | Graduation year not eligible                     | Graduation Criteria Not Met     | Graduation Criteria Not Met             | Pass   |
+| TC-08   | Project incomplete                               | Application On Hold             | Application On Hold                     | Pass   |
+| TC-09   | Profile not verified                             | Application On Hold             | Application On Hold                     | Pass   |
+| TC-10   | All days absent                                  | Practice Not Evaluated          | Practice Not Evaluated                  | Pass   |
+| TC-11   | Invalid score below -1                           | Input rejected                  | Input rejected and prompted again       | Pass   |
+| TC-12   | Invalid score above 100                          | Input rejected                  | Input rejected and prompted again       | Pass   |
+| TC-13   | Boundary values (0, 39, 40, 59, 60, 74, 75, 100) | Correct classifications         | Correct classifications displayed       | Pass   |
+| TC-14   | Multiple failed conditions                       | First major blocker displayed   | First major blocker displayed correctly | Pass   |
 
 ---
 
@@ -140,17 +141,46 @@ Next Action            : Proceed to Mock Interview
 
 * **Name:** Ranadeep Reddy
 * **Repository URL:** https://github.com/ranadeep04/preptrack-Ranadeep
-* **My main contribution:** Complete implementation of the PrepTrack application.Checked team members repositories and explained their mistakes and t
+* **My main contribution:** Implemented the complete execution flow in main.py — building input validation loops for all profile fields, constructing the seven-day practice analysis loop, tracking score metrics without any prohibited data structures, and establishing the priority-based final decision chain.
+Checked team members repositories and explained their mistakes to modify and reviewed other's repositories and given feedback.
 * **Features I implemented:** Input validation, score processing, score classification, counters, highest/lowest score logic, critical-score logic, average calculation, eligibility checks, final status logic, and final report display.
 * **Python concepts I used:** Loops, conditions, Boolean expressions, counters, accumulators, and input validation.
 * **Most difficult logic:** Determining the final status using the required priority order.
 * **Problem I faced:** Correctly validating practice scores and handling absent days without affecting calculations.
 * **How I solved it:** Used a validation loop for scores and `continue` for absent days so that calculations only used attempted scores.
 ---
-## Team Lead  Requirement
-|Member Name	|	PrepTrack Repository Link |	Submission Status|
-|               |                             |                  |
----
+## Code Review Completed
+
+| Reviewed Member | Repository Link | What Was Done Well | Issue Identified | Suggested Improvement |
+|---|---|---|---|---|
+| Lokesh | https://github.com/loki9317/preptrack-lokesh | Good program structure, correct score processing, clear final report formatting, and proper use of loops and conditions | Input validation for attendance and project completion does not repeatedly ask until a valid value is entered | Use validation loops for attendance and project completion and improve invalid-input messages for better user experience |
+
+## Feedback Received
+
+**Reviewed By:** Lokesh
+
+**Feedback Received:** Suggested improving the user experience by displaying clearer messages for invalid inputs and ensuring validation loops continue until a valid value is entered.
+
+**Was the Feedback Valid?** Yes
+
+**Change Made:** Reviewed and improved the validation flow for attendance and project-related inputs and updated the user prompts for better clarity.
+
+**Commit Message Used:** `attendance validation changes`
+
+
+
+| Member Name | GitHub Profile Link | PrepTrack Repository Link | Submission Status |
+|---|---|---|---|
+| LoKesh Kumar |                      |   https://github.com/loki9317/preptrack-lokesh.git                                           | Completed |
+| BharathRaj |                            |https://github.com/BHARATH007776247/preptrack-bharath.git
+ | completed |
+| Dharaneesh Natarajan|                            | https://github.com/Dharaneesh0308/preptrack-dharaneesh | completed |
+| G R Mythri |                            | https://github.com/MythriReddy-123/preptrack-mythri | completed|
+| Deepthika |                            | https://github.com/Nama-Deepthika/Preptrack-Deepthika.git| completed|
+|Prathyusha|                              |https://github.com/Prathyu431/preptrack-prathyusha.git| completed|
+|Harsha varshan|                          |https://github.com/harshavardhan3612/preptrack-Harsha|completed|
+|Akash|                                   |https://github.com/Akashchakali/preptrack-Akash.git| completed|
+|yashvanth|                               |https://github.com/kyashvanthraj/preptrack-yashvanth| completed|
 
 ## Repository Structure
 
