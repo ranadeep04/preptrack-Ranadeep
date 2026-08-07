@@ -68,15 +68,20 @@ The program validates user input, classifies performance for each practice day, 
 
 ---
 
+
 ## How to Run the Program
 
 Open the terminal inside the project folder and run:
+
+```bash
 python main.py
+```
 
 If your system uses Python 3:
+
+```bash
 python3 main.py
-
-
+```
 ---
 
 ## Sample Output
@@ -187,6 +192,7 @@ Checked team members repositories and explained their mistakes to modify and rev
 
 ## Repository Structure
 
+```text
 preptrack-Ranadeep/
 ├── main.py
 └── README.md
@@ -196,7 +202,10 @@ preptrack-Ranadeep/
 
 ## Final Status
 
-* Program Working: **Yes**
-* Mandatory Tests Completed: **Yes**
-* README Completed: **Yes**
-* Ready for Submission: **Yes**
+- Program Working: **Yes**
+- Mandatory Tests Completed: **Yes**
+- README Completed: **Yes**
+- Code Review Completed: **Yes**
+- Feedback Section Completed: **Yes**
+- Team Lead Directory Updated: **Yes**
+- Ready for Submission: **Yes**
