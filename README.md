@@ -91,7 +91,7 @@ python3 main.py
               PREPTRACK REPORT
 ==================================================
 Student Name           : Ranadeep
-Registration Number    : 23CS001
+Registration Number    : 446
 Graduation Year        : 2026
 Attendance             : 85.0%
 
