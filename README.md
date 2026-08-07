@@ -172,8 +172,7 @@ Checked team members repositories and explained their mistakes to modify and rev
 | Member Name | GitHub Profile Link | PrepTrack Repository Link | Submission Status |
 |---|---|---|---|
 | LoKesh Kumar |                      |   https://github.com/loki9317/preptrack-lokesh.git                                           | Completed |
-| BharathRaj |                            |https://github.com/BHARATH007776247/preptrack-bharath.git
- | completed |
+| BharathRaj |                        |https://github.com/BHARATH007776247/preptrack-bharath.git| completed |
 | Dharaneesh Natarajan|                            | https://github.com/Dharaneesh0308/preptrack-dharaneesh | completed |
 | G R Mythri |                            | https://github.com/MythriReddy-123/preptrack-mythri | completed|
 | Deepthika |                            | https://github.com/Nama-Deepthika/Preptrack-Deepthika.git| completed|
