@@ -167,6 +167,8 @@ Checked team members repositories and explained their mistakes to modify and rev
 
 **Commit Message Used:** `attendance validation changes`
 
+---
+
 ## Team Lead Requirement
 
 | Member Name | GitHub Profile Link | PrepTrack Repository Link | Submission Status |
@@ -181,9 +183,10 @@ Checked team members repositories and explained their mistakes to modify and rev
 |Akash|                                   |https://github.com/Akashchakali/preptrack-Akash.git| completed|
 |yashvanth|                               |https://github.com/kyashvanthraj/preptrack-yashvanth| completed|
 
+---
+
 ## Repository Structure
 
-```text
 preptrack-Ranadeep/
 ├── main.py
 └── README.md
